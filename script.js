@@ -5,11 +5,12 @@ let btn = document.querySelector("#submit");
 
 let tbody = document.querySelector("#book-list");
 
-let del = document.createElement("button");
+
 
 btn.addEventListener("click",(e)=>{
 	e.preventDefault();
-	let tr
+	let tr;
+	let del = document.createElement("button");
 	del.innerText ="x";
 	del.style.backgroundColor = "red";
 	if(title.value && author.value && isbn.value){
