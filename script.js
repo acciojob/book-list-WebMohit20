@@ -1,1 +1,28 @@
-//your JS code here. If required.
+let title = document.querySelector("#title");
+let author = document.querySelector("#author");
+let isbn = document.querySelector("#isbn");
+let btn = document.querySelector("#submit");
+
+let tbody = document.querySelector("#book-list");
+
+let del = document.createElement("button");
+
+btn.addEventListener("click",(e)=>{
+	e.preventDefault();
+	let tr
+	del.innerText ="x";
+	del.style.backgroundColor = "red";
+	if(title.value && author.value && isbn.value){
+		tr = tbody.insertRow();
+		tr.insertCell().innerText = title.value;
+		tr.insertCell().innerText = author.value;
+		tr.insertCell().innerText = isbn.value;
+		tr.append(del);
+	}
+	del.addEventListener("click", ()=>{
+		tr.remove();
+	})
+	title.value = "";
+	author.value = "";
+	isbn.value = ""
+})
