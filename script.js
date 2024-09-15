@@ -11,6 +11,7 @@ btn.addEventListener("click",(e)=>{
 	e.preventDefault();
 	let tr;
 	let del = document.createElement("button");
+	del.className = "delete"
 	del.innerText ="x";
 	del.style.backgroundColor = "red";
 	if(title.value && author.value && isbn.value){
