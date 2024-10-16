@@ -20,9 +20,14 @@ btn.addEventListener("click",(e)=>{
 		tr.insertCell().innerText = author.value;
 		tr.insertCell().innerText = isbn.value;
 		tr.append(del);
+		console.log(tr)
 	}
+	
 	del.addEventListener("click", ()=>{
 		tr.remove();
+		td.remove();
+		td.remove();
+		td.remove();
 	})
 	title.value = "";
 	author.value = "";
